@@ -12,9 +12,7 @@ import (
 // Day 2 of Advent of Code challenge
 // Link: https://adventofcode.com/2020/day/2
 
-/*
-PasswordPolicy: Struct to store password policies
-*/
+// PasswordPolicy to represent password policies
 type PasswordPolicy struct {
 	value    byte
 	minimum  int64
