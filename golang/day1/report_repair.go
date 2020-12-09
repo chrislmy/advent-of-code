@@ -9,6 +9,9 @@ import (
 	"strconv"
 )
 
+// Day 1 of Advent of Code challenge
+// Link: https://adventofcode.com/2020/day/1
+
 var TARGET int64 = 2020
 
 func parseInput() []int64 {
