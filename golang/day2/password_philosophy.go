@@ -58,9 +58,9 @@ func solution(part int) int {
 		passwordPolicy := getPassWordPolicy(line)
 		var isValid bool = false
 		if part == 1 {
-			isValid = isValidPasswordPart1(passwordPolicy)
+			isValid = passwordPolicy.isValidPasswordPart1()
 		} else {
-			isValid = isValidPasswordPart2(passwordPolicy)
+			isValid = passwordPolicy.isValidPasswordPart2()
 		}
 
 		if isValid {
@@ -71,7 +71,7 @@ func solution(part int) int {
 	return result
 }
 
-func isValidPasswordPart1(passwordPolicy *PasswordPolicy) bool {
+func (passwordPolicy PasswordPolicy) isValidPasswordPart1() bool {
 	var count int64 = 0
 	for _, char := range passwordPolicy.password {
 		if byte(char) == passwordPolicy.value {
@@ -81,7 +81,7 @@ func isValidPasswordPart1(passwordPolicy *PasswordPolicy) bool {
 	return count >= passwordPolicy.minimum && count <= passwordPolicy.maximum
 }
 
-func isValidPasswordPart2(passwordPolicy *PasswordPolicy) bool {
+func (passwordPolicy PasswordPolicy) isValidPasswordPart2() bool {
 	var result bool = false
 	if passwordPolicy.password[passwordPolicy.minimum-1] == passwordPolicy.value {
 		result = true
