@@ -8,6 +8,9 @@ import (
 	"os"
 )
 
+// Day 5 of Advent of Code challenge
+// Link: https://adventofcode.com/2020/day/5
+
 func processSeatIDs(lines []string) []int {
 	var seats []int
 
