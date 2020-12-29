@@ -9,6 +9,9 @@ import (
 	"strings"
 )
 
+// Day 8 of Advent of Code challenge
+// Link: https://adventofcode.com/2020/day/8
+
 type Instruction struct {
 	operation string
 	argument  int
